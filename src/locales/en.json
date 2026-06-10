@@ -12,6 +12,113 @@
     "hero_subtitle": "Experience incredible transformations through our non-invasive procedures. We specialize in face and body contouring for a natural, youthful appearance that lasts.",
     "explore": "Explore Treatments",
     "premium_services": "Premium Aesthetic Services",
-    "premium_subtitle": "We offer state-of-the-art FDA approved technologies personalized for your unique goals."
+    "premium_subtitle": "We offer state-of-the-art FDA approved technologies personalized for your unique goals.",
+    "services": {
+      "cellulite": {
+        "title": "Cellulite Reduction",
+        "desc": "Combat unwanted cellulite with MFCU, LPG, and Shockwave therapy for smooth, firm skin."
+      },
+      "body": {
+        "title": "Body Contouring",
+        "desc": "Dissolve stubborn fat non-invasively and tone your body with MFCU and EMSculpting."
+      },
+      "face": {
+        "title": "Non-Surgical Face Lift",
+        "desc": "Rejuvenate your look and define your jawline with MMFU, Microneedling RF, and more."
+      },
+      "skin": {
+        "title": "Skin Resurfacing",
+        "desc": "Restore your skin's youthful glow with advanced peels and hydrafacial treatments."
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform?",
+      "subtitle": "Schedule your complimentary consultation today and let our experts design your personalized treatment plan.",
+      "button": "Book Your Consultation"
+    },
+    "bespoke": {
+      "title": "Bespoke Skin Rejuvenation",
+      "desc": "Every treatment protocol at Denver Clinic is meticulously tailored to your unique biology. We don't believe in one-size-fits-all.",
+      "list_1": "Personalized consultations to determine exact needs",
+      "list_2": "Combination therapies for amplified, long-lasting results",
+      "list_3": "State-of-the-art non-invasive technologies",
+      "button": "Discover Facial Treatments"
+    },
+    "gallery": {
+      "title": "Exceptional Results",
+      "subtitle": "Real transformations. See the difference."
+    }
+  },
+  "footer": {
+    "desc": "Experience the pinnacle of non-invasive aesthetic treatments in a luxurious, serene environment.",
+    "quick_links": "Quick Links",
+    "contact_info": "Contact Info",
+    "rights": "All rights reserved."
+  },
+  "cellulite": {
+    "title": "Cellulite Reduction",
+    "subtitle": "Advanced non-invasive protocols to smooth and firm your skin.",
+    "advanced": "Our Advanced Treatments",
+    "mfcu": {
+      "title": "MFCU (Micro Focused Contour Ultrasound)",
+      "desc": "Targets deep fat layers to reduce volume and tighten skin."
+    },
+    "lpg": {
+      "title": "LPG Endermologie",
+      "desc": "Mechanical massage that stimulates circulation and lymphatic drainage."
+    },
+    "shockwave": {
+      "title": "Shockwave Therapy",
+      "desc": "Acoustic waves break down fat deposits and improve skin elasticity."
+    }
+  },
+  "body": {
+    "title": "Body Contouring",
+    "subtitle": "Sculpt and define your body with our state-of-the-art non-surgical technologies.",
+    "treatments": "Our Contouring Solutions",
+    "mfcu": {
+      "title": "MFCU Fat Reduction",
+      "desc": "Precisely target and destroy stubborn fat cells in specific areas."
+    },
+    "emsculpt": {
+      "title": "EMSculpting",
+      "desc": "Build muscle and burn fat simultaneously using high-intensity electromagnetic energy."
+    }
+  },
+  "face": {
+    "title": "Non-Surgical Face Lift",
+    "subtitle": "Restore youthful contours and skin elasticity without surgery.",
+    "approaches": "Our Rejuvenation Approaches",
+    "mmfu": {
+      "title": "MMFU (Micro Macro Focused Ultrasound)",
+      "desc": "Lifts and tightens the face and neck by stimulating deep collagen production."
+    },
+    "rf": {
+      "title": "Microneedling RF",
+      "desc": "Combines microneedling with radiofrequency to improve texture, tone, and firmness."
+    }
+  },
+  "contact": {
+    "title": "Book Your Consultation",
+    "subtitle": "Take the first step towards your aesthetic goals. Our experts are ready to design your personalized plan.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "interest": "Area of Interest",
+      "interest_options": {
+        "cellulite": "Cellulite Reduction",
+        "body": "Body Contouring",
+        "face": "Face Lift / Rejuvenation",
+        "other": "Other"
+      },
+      "button": "Request Consultation"
+    },
+    "visit": {
+      "title": "Visit Our Clinic",
+      "address": "123 Aesthetic Boulevard, Suite 500, Denver, CO 80202",
+      "phone": "+1 (555) 123-4567",
+      "email": "contact@denveraesthetics.com",
+      "hours": "Mon-Fri: 9am - 6pm | Sat: 10am - 4pm"
+    }
   }
 }

@@ -63,8 +63,8 @@ export const Home = () => {
             <AnimatedSection delay={0.1}>
               <Link to="/cellulite" style={{ display: 'block', height: '100%' }}>
                 <ServiceCard 
-                  title="Cellulite Reduction" 
-                  description="Combat unwanted cellulite with MFCU, LPG, and Shockwave therapy for smooth, firm skin."
+                  title={t('home.services.cellulite.title')} 
+                  description={t('home.services.cellulite.desc')}
                   icon={<Activity size={32} strokeWidth={1.5} />}
                   badge="FDA Approved"
                 />
@@ -73,8 +73,8 @@ export const Home = () => {
             <AnimatedSection delay={0.2}>
               <Link to="/body-contouring" style={{ display: 'block', height: '100%' }}>
                 <ServiceCard 
-                  title="Body Contouring" 
-                  description="Dissolve stubborn fat non-invasively and tone your body with MFCU and EMSculpting."
+                  title={t('home.services.body.title')} 
+                  description={t('home.services.body.desc')}
                   icon={<UserPlus size={32} strokeWidth={1.5} />}
                 />
               </Link>
@@ -82,16 +82,16 @@ export const Home = () => {
             <AnimatedSection delay={0.3}>
               <Link to="/face-lift" style={{ display: 'block', height: '100%' }}>
                 <ServiceCard 
-                  title="Non-Surgical Face Lift" 
-                  description="Rejuvenate your look and define your jawline with MMFU, Microneedling RF, and more."
+                  title={t('home.services.face.title')} 
+                  description={t('home.services.face.desc')}
                   icon={<Sparkles size={32} strokeWidth={1.5} />}
                 />
               </Link>
             </AnimatedSection>
             <AnimatedSection delay={0.4}>
               <ServiceCard 
-                title="Skin Resurfacing" 
-                description="Restore your skin's youthful glow with advanced peels and hydrafacial treatments."
+                title={t('home.services.skin.title')} 
+                description={t('home.services.skin.desc')}
                 icon={<Droplets size={32} strokeWidth={1.5} />}
               />
             </AnimatedSection>
@@ -109,16 +109,16 @@ export const Home = () => {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
-              <h2 style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', color: 'var(--color-primary)', marginBottom: '1.5rem' }}>Bespoke Skin Rejuvenation</h2>
+              <h2 style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', color: 'var(--color-primary)', marginBottom: '1.5rem' }}>{t('home.bespoke.title')}</h2>
               <p style={{ opacity: 0.8, marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                Every treatment protocol at Denver Clinic is meticulously tailored to your unique biology. We don't believe in one-size-fits-all.
+                {t('home.bespoke.desc')}
               </p>
               <ul style={{ paddingLeft: '1.5rem', opacity: 0.8, marginBottom: '2rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <li>Personalized consultations to determine exact needs</li>
-                <li>Combination therapies for amplified, long-lasting results</li>
-                <li>State-of-the-art non-invasive technologies</li>
+                <li>{t('home.bespoke.list_1')}</li>
+                <li>{t('home.bespoke.list_2')}</li>
+                <li>{t('home.bespoke.list_3')}</li>
               </ul>
-              <Link to="/face-lift" className="btn btn-secondary">Discover Facial Treatments</Link>
+              <Link to="/face-lift" className="btn btn-secondary">{t('home.bespoke.button')}</Link>
             </AnimatedSection>
           </div>
         </div>
@@ -128,11 +128,11 @@ export const Home = () => {
       <section className="py-24" style={{ backgroundColor: 'var(--color-secondary)', color: 'white' }}>
         <div className="container text-center">
           <AnimatedSection>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Ready to Transform?</h2>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--color-primary)' }}>{t('home.cta.title')}</h2>
             <p style={{ fontSize: '1.2rem', opacity: 0.9, maxWidth: '600px', margin: '0 auto 2rem' }}>
-              Schedule your complimentary consultation today and let our experts design your personalized treatment plan.
+              {t('home.cta.subtitle')}
             </p>
-            <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>Book Your Consultation</Link>
+            <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>{t('home.cta.button')}</Link>
           </AnimatedSection>
         </div>
       </section>
@@ -141,8 +141,8 @@ export const Home = () => {
       <section className="py-24" style={{ backgroundColor: 'var(--color-bg)' }}>
         <div className="container">
           <AnimatedSection className="text-center mb-16">
-            <h2 style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', color: 'var(--color-primary)' }}>Exceptional Results</h2>
-            <p style={{ opacity: 0.8 }}>Real transformations. See the difference.</p>
+            <h2 style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', color: 'var(--color-primary)' }}>{t('home.gallery.title')}</h2>
+            <p style={{ opacity: 0.8 }}>{t('home.gallery.subtitle')}</p>
           </AnimatedSection>
           <PhotoCarousel3D images={['/result_1.png', '/result_2.png', '/result_3.png', '/skin_resurfacing.png']} />
         </div>
