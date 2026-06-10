@@ -175,3 +175,48 @@ a {
 main {
   flex: 1;
 }
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+  .mobile-flex { display: flex !important; }
+  
+  .stack-mobile { flex-direction: column !important; width: 100% !important; }
+  .stack-mobile > * { width: 100% !important; text-align: center; justify-content: center; }
+  
+  .container { padding: 0 1.25rem; }
+  h1 { font-size: 2.5rem !important; }
+  h2 { font-size: 2rem !important; }
+  h3 { font-size: 1.5rem !important; }
+  
+  .glass-panel { padding: 1.5rem !important; }
+  .py-24 { padding-top: 4rem; padding-bottom: 4rem; }
+  .py-16 { padding-top: 3rem; padding-bottom: 3rem; }
+  
+  .carousel-nav-btn { width: 40px !important; height: 40px !important; }
+  .carousel-nav-btn-left { left: 0.5rem !important; }
+  .carousel-nav-btn-right { right: 0.5rem !important; }
+}
+
+@media (min-width: 769px) {
+  .mobile-only { display: none !important; }
+  .mobile-flex { display: none !important; }
+}
+
+/* Mobile Menu Animation & Styles */
+.mobile-menu-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: var(--glass-border);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-lg);
+}

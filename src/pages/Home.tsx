@@ -30,7 +30,7 @@ export const Home = () => {
             <p style={{ fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2.5rem', opacity: 0.9 }}>
               {t('home.hero_subtitle')}
             </p>
-            <div className="flex justify-center gap-4" style={{ flexWrap: 'wrap' }}>
+            <div className="flex justify-center gap-4 stack-mobile">
               <Link to="/contact" className="btn btn-primary">{t('nav.book_now')}</Link>
               <Link to="/cellulite" className="btn" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.3)', color: 'white' }}>{t('home.explore')}</Link>
             </div>
