@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home",
+    "cellulite": "Cellulite",
+    "body_contouring": "Body Contouring",
+    "face_lift": "Face Lift",
+    "book_now": "Book Now"
+  },
+  "home": {
+    "hero_title_1": "Reveal Your",
+    "hero_title_2": "Natural Radiance",
+    "hero_subtitle": "Experience incredible transformations through our non-invasive procedures. We specialize in face and body contouring for a natural, youthful appearance that lasts.",
+    "explore": "Explore Treatments",
+    "premium_services": "Premium Aesthetic Services",
+    "premium_subtitle": "We offer state-of-the-art FDA approved technologies personalized for your unique goals."
+  }
+}
