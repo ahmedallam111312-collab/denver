@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Navbar } from './components/Navbar';
@@ -62,9 +62,53 @@ const AnimatedRoutes = () => {
   );
 };
 
+const KholyMessage = () => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    // Show immediately, then hide after 2 seconds, and repeat every 5 seconds
+    const interval = setInterval(() => {
+      setShow(true);
+      setTimeout(() => setShow(false), 2000);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <AnimatePresence>
+      {show && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5, x: '-50%', y: '-50%' }}
+          animate={{ opacity: 1, scale: 1, x: '-50%', y: '-50%' }}
+          exit={{ opacity: 0, scale: 0.5, x: '-50%', y: '-50%' }}
+          style={{
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            zIndex: 9999,
+            background: 'var(--color-primary)',
+            color: 'white',
+            padding: '1rem 3rem',
+            borderRadius: 'var(--radius-lg)',
+            fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+            fontWeight: 'bold',
+            boxShadow: 'var(--shadow-xl)',
+            pointerEvents: 'none',
+            textAlign: 'center',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          بنحبك يا خولي
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
 function App() {
   return (
     <Router>
+      <KholyMessage />
       <AnimatedRoutes />
     </Router>
   );
