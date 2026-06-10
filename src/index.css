@@ -178,6 +178,9 @@ main {
 
 /* Responsive Utilities */
 @media (max-width: 768px) {
+  body {
+    padding-bottom: 80px;
+  }
   .desktop-only { display: none !important; }
   .mobile-only { display: block !important; }
   .mobile-flex { display: flex !important; }
@@ -204,19 +207,47 @@ main {
   .mobile-flex { display: none !important; }
 }
 
-/* Mobile Menu Animation & Styles */
-.mobile-menu-overlay {
-  position: absolute;
-  top: 100%;
+/* Bottom Navigation (Mobile) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
   left: 0;
   width: 100%;
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: var(--glass-border);
-  padding: 1.5rem;
+  border-top: var(--glass-border);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.75rem 0.5rem;
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  z-index: 50;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+}
+
+.bottom-nav.hidden {
+  transform: translateY(100%);
+}
+
+.bottom-nav-item {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  box-shadow: var(--shadow-lg);
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-text);
+  opacity: 0.5;
+  font-size: 0.65rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.bottom-nav-item.active {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+.bottom-nav-item:active {
+  transform: scale(0.95);
 }
