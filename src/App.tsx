@@ -63,16 +63,14 @@ const AnimatedRoutes = () => {
 };
 
 const KholyMessage = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
-  useEffect(() => {
-    // Show immediately, then hide after 2 seconds, and repeat every 5 seconds
-    const interval = setInterval(() => {
+  const handleClose = () => {
+    setShow(false);
+    setTimeout(() => {
       setShow(true);
-      setTimeout(() => setShow(false), 2000);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    }, 3000);
+  };
 
   return (
     <AnimatePresence>
@@ -88,16 +86,43 @@ const KholyMessage = () => {
             zIndex: 9999,
             background: 'var(--color-primary)',
             color: 'white',
-            padding: '1rem 3rem',
+            padding: '2rem 4rem',
             borderRadius: 'var(--radius-lg)',
             fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
             fontWeight: 'bold',
             boxShadow: 'var(--shadow-xl)',
-            pointerEvents: 'none',
             textAlign: 'center',
-            whiteSpace: 'nowrap'
+            whiteSpace: 'nowrap',
+            pointerEvents: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '1rem'
           }}
         >
+          <button 
+            onClick={handleClose}
+            style={{
+              position: 'absolute',
+              top: '0.5rem',
+              right: '0.5rem',
+              background: 'rgba(0,0,0,0.2)',
+              border: 'none',
+              borderRadius: '50%',
+              width: '30px',
+              height: '30px',
+              color: 'white',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.2rem',
+              lineHeight: 1
+            }}
+            aria-label="Close"
+          >
+            ×
+          </button>
           بنحبك يا خولي
         </motion.div>
       )}
