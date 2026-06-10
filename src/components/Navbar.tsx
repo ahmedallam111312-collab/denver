@@ -43,9 +43,9 @@ export const Navbar = () => {
   return (
     <>
       {/* Top Header (Desktop & Mobile) */}
-      <nav className="glass-nav" style={{ position: 'sticky', top: 0, zIndex: 50, padding: '1rem 2rem' }}>
+      <nav className="glass-nav" style={{ position: 'sticky', top: 0, zIndex: 50, padding: '0.75rem 0' }}>
         <div className="container flex justify-between items-center relative" style={{ padding: '0 1rem' }}>
-          <Link to="/" style={{ fontSize: '1.5rem', fontWeight: 600, fontFamily: 'var(--font-heading)' }}>
+          <Link to="/" style={{ fontSize: '1.4rem', fontWeight: 600, fontFamily: 'var(--font-heading)' }}>
             <span style={{ color: 'var(--color-primary)' }}>DENVER</span> Clinic
           </Link>
           
@@ -69,7 +69,7 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Fixed Theme & Lang Toggles */}
-          <div className="mobile-only" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          <div className="mobile-flex desktop-only" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
             <button onClick={toggleTheme} className="btn btn-secondary" style={{ padding: '0.5rem', borderRadius: '50%' }}>
               {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
             </button>
@@ -82,13 +82,13 @@ export const Navbar = () => {
       </nav>
 
       {/* Mobile Bottom Navigation Bar */}
-      <div className={`mobile-only bottom-nav ${isBottomNavVisible ? 'visible' : 'hidden'}`}>
+      <div className={`mobile-flex desktop-only bottom-nav ${isBottomNavVisible ? 'visible' : 'hidden'}`}>
         {navItems.map((item) => {
           const isActive = location.pathname === item.path;
           return (
             <Link key={item.path} to={item.path} className={`bottom-nav-item ${isActive ? 'active' : ''}`}>
               {item.icon}
-              <span style={{ fontFamily: 'var(--font-heading)' }}>{item.label}</span>
+              <span style={{ fontFamily: 'var(--font-heading)', marginTop: '2px' }}>{item.label}</span>
             </Link>
           );
         })}
